@@ -1,0 +1,5 @@
+root = true # definindo o diretório atual como diretório raiz p/ arquivos que não estão nele também sofrerem alterações
+
+[*] # definindo quais arquivos receberão as configurações abaixo
+indent_style = space
+indent_size = 2
