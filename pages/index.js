@@ -1,6 +1,6 @@
 // Componente React, uma função JS
 function Home() {
-    return <h1>Au revoir, Amandoca &lt;	333</h1>
+  return <h1>Au revoir, Amandoca &lt; 333</h1>;
 }
 
 // Sinalizando que a função Home será utilizada para renderizar a página
