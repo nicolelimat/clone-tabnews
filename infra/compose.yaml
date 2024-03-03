@@ -4,9 +4,15 @@ services:
     # configurações de da onde o serviço tá vindo
     # o serviço vai estar vindo de uma imagem docker
     image: 'postgres:16.1-alpine3.19'
-    # chave que vai ser responsável por passar valores pro ambiente dentro do container, ou seja, as variáveis de ambiente que o container pede
-    environment:
-      POSTGRES_PASSWORD: 'local_password'
+    # chave que vai ser responsável por passar valores pro ambiente dentro do container, 
+    # ou seja, as variáveis de ambiente que o container pede (de forma manual)
+    #environment:
+    #  POSTGRES_PASSWORD: 'local_password'
+    #####
+    # forma utilizando um arquivo .env
+    # lembrando que só é lido quando a imagem do docker é inicializada pela primeira vez
+    env_file:
+      - ../.env
     # abrindo as portas do container (internas e externas) "host:container" 
     ports:
       - "5432:5432"
