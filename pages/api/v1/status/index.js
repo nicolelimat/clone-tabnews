@@ -1,4 +1,4 @@
-import database from "../../../../infra/database.js";
+import database from "infra/database.js";
 
 // informar qual função desse arquivo tem a responsabilidade de retornar o status da página
 async function status(request, response) {
