@@ -8,6 +8,8 @@ async function query(queryObject) {
     user: process.env.POSTGRES_USER,
     database: process.env.POSTGRES_DB,
     password: process.env.POSTGRES_PASSWORD,
+    // ssl: condição ? valor_se_verdadeiro : valor_se_falso
+    ssl: process.env.NODE_ENV === "development" ? false : true, // propriedade que garante o uso de uma conexão segura
   }); // comando síncrono que instantaneamente objeto paradão pronto pra ser conectado no banco
 
   console.log("Credenciais do Postgres:", {
